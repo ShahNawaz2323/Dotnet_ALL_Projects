@@ -1,0 +1,32 @@
+﻿@model WebApp.Models.LoginModel
+@{
+    ViewBag.Title = "login";
+}
+
+<h2>login</h2>
+
+@*@using (Html.BeginForm())
+    {
+       <div>
+           username : @Html.TextBox("Username")
+       </div>
+       <div>
+           Password : @Html.TextBox("Password")
+       </div>
+       <div>
+           <input type="submit" name="name" value="Login" />
+       </div>
+    }*@
+
+@using (Html.BeginForm())
+{
+    <div>
+        username : @Html.TextBoxFor(m => m.Username)
+    </div>
+    <div>
+        Password : @Html.TextBoxFor(m => m.Password)
+    </div>
+    <div>
+        <input type="submit" name="name" value="Login" />
+    </div>
+}
